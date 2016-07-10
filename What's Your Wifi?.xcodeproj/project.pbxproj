@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		C4BDA5061D312E88000271EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDA5051D312E88000271EB /* AppDelegate.swift */; };
-		C4BDA5081D312E88000271EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDA5071D312E88000271EB /* ViewController.swift */; };
+		C4BDA5081D312E88000271EB /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDA5071D312E88000271EB /* CreateView.swift */; };
 		C4BDA50B1D312E88000271EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BDA5091D312E88000271EB /* Main.storyboard */; };
 		C4BDA50E1D312E88000271EB /* What_s_Your_Wifi_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4BDA50C1D312E88000271EB /* What_s_Your_Wifi_.xcdatamodeld */; };
 		C4BDA5101D312E88000271EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BDA50F1D312E88000271EB /* Assets.xcassets */; };
 		C4BDA5131D312E88000271EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BDA5111D312E88000271EB /* LaunchScreen.storyboard */; };
+		C4BDA5231D3139F2000271EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDA5221D3139F2000271EB /* Constants.swift */; };
+		C4BDA5251D3154D1000271EB /* CreatedQRImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDA5241D3154D1000271EB /* CreatedQRImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C4BDA5021D312E87000271EB /* What's Your Wifi?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What's Your Wifi?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BDA5051D312E88000271EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4BDA5071D312E88000271EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4BDA5071D312E88000271EB /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		C4BDA50A1D312E88000271EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4BDA50D1D312E88000271EB /* What_s_Your_Wifi_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = What_s_Your_Wifi_.xcdatamodel; sourceTree = "<group>"; };
 		C4BDA50F1D312E88000271EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4BDA5121D312E88000271EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4BDA5141D312E88000271EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4BDA5221D3139F2000271EB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C4BDA5241D3154D1000271EB /* CreatedQRImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedQRImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		C4BDA5041D312E88000271EB /* What's Your Wifi? */ = {
 			isa = PBXGroup;
 			children = (
-				C4BDA5051D312E88000271EB /* AppDelegate.swift */,
-				C4BDA5071D312E88000271EB /* ViewController.swift */,
+				C4BDA5211D3139D6000271EB /* Constants */,
+				C4BDA5201D31372A000271EB /* Create */,
+				C4BDA51A1D312F1F000271EB /* Supporting Files */,
 				C4BDA5091D312E88000271EB /* Main.storyboard */,
-				C4BDA50F1D312E88000271EB /* Assets.xcassets */,
+			);
+			path = "What's Your Wifi?";
+			sourceTree = "<group>";
+		};
+		C4BDA51A1D312F1F000271EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4BDA5051D312E88000271EB /* AppDelegate.swift */,
 				C4BDA5111D312E88000271EB /* LaunchScreen.storyboard */,
+				C4BDA50F1D312E88000271EB /* Assets.xcassets */,
 				C4BDA5141D312E88000271EB /* Info.plist */,
 				C4BDA50C1D312E88000271EB /* What_s_Your_Wifi_.xcdatamodeld */,
 			);
-			path = "What's Your Wifi?";
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4BDA5201D31372A000271EB /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				C4BDA5071D312E88000271EB /* CreateView.swift */,
+				C4BDA5241D3154D1000271EB /* CreatedQRImageView.swift */,
+			);
+			name = Create;
+			sourceTree = "<group>";
+		};
+		C4BDA5211D3139D6000271EB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C4BDA5221D3139F2000271EB /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4BDA5081D312E88000271EB /* ViewController.swift in Sources */,
+				C4BDA5081D312E88000271EB /* CreateView.swift in Sources */,
 				C4BDA50E1D312E88000271EB /* What_s_Your_Wifi_.xcdatamodeld in Sources */,
+				C4BDA5251D3154D1000271EB /* CreatedQRImageView.swift in Sources */,
 				C4BDA5061D312E88000271EB /* AppDelegate.swift in Sources */,
+				C4BDA5231D3139F2000271EB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
