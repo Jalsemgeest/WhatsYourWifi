@@ -12,25 +12,20 @@ class CreateView: UIViewController {
 
     @IBOutlet weak var ssidTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var qrImage: UIImageView!
-    var qrCodeImage: CIImage!
+    var qrCode: QRCode?
     
     @IBAction func attemptCreate() {
         if let ssid = ssidTextField.text {
             if let password = passwordTextField.text {
-                
-                let filter = CIFilter(name: "CIQRCodeGenerator")!
-                
-                var data = "\(Constants.WIFI_NAME)\(ssid)\(Constants.PASSWORD)\(password)".dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: false)
-                
-                filter.setValue(data, forKey: "inputMessage")
-                filter.setValue("Q", forKey: "inputCorrectionLevel")
-                
-                qrCodeImage = filter.outputImage
-                
+                qrCode = QRCode(name: ssid, password: password)
                 goToQRPreview()
             }
         }
+    }
+    
+    // Navigation
+    
+    @IBAction func goBack(segue: UIStoryboardSegue) {
     }
     
     func goToQRPreview() {
@@ -42,8 +37,7 @@ class CreateView: UIViewController {
             switch (identifier) {
             case Constants.Segues.SHOW_CREATED_WIFI_QR:
                 if let cQRVc = segue.destinationView as? CreatedQRImageView {
-                    cQRVc.ciImage = qrCodeImage
-                    cQRVc.wifiName = ssidTextField.text!
+                    cQRVc.qrCode = self.qrCode
                 }
                 break;
             default:

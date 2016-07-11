@@ -15,6 +15,10 @@
 		C4BDA5131D312E88000271EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BDA5111D312E88000271EB /* LaunchScreen.storyboard */; };
 		C4BDA5231D3139F2000271EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDA5221D3139F2000271EB /* Constants.swift */; };
 		C4BDA5251D3154D1000271EB /* CreatedQRImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDA5241D3154D1000271EB /* CreatedQRImageView.swift */; };
+		C4CF88D81D32EE00009A9BAF /* JoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF88D71D32EE00009A9BAF /* JoinView.swift */; };
+		C4CF88DB1D32F5F4009A9BAF /* QRCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF88DA1D32F5F4009A9BAF /* QRCodeService.swift */; };
+		C4CF88DE1D32F6B8009A9BAF /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF88DD1D32F6B8009A9BAF /* QRCode.swift */; };
+		C4CF88E01D32FD00009A9BAF /* FoundQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF88DF1D32FCFF009A9BAF /* FoundQRView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		C4BDA5141D312E88000271EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4BDA5221D3139F2000271EB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C4BDA5241D3154D1000271EB /* CreatedQRImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedQRImageView.swift; sourceTree = "<group>"; };
+		C4CF88D71D32EE00009A9BAF /* JoinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinView.swift; sourceTree = "<group>"; };
+		C4CF88DA1D32F5F4009A9BAF /* QRCodeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeService.swift; sourceTree = "<group>"; };
+		C4CF88DD1D32F6B8009A9BAF /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		C4CF88DF1D32FCFF009A9BAF /* FoundQRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundQRView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,9 @@
 		C4BDA5041D312E88000271EB /* What's Your Wifi? */ = {
 			isa = PBXGroup;
 			children = (
+				C4CF88DC1D32F6AB009A9BAF /* Model */,
+				C4CF88D91D32F5DF009A9BAF /* Services */,
+				C4CF88D61D32EDE2009A9BAF /* Join */,
 				C4BDA5211D3139D6000271EB /* Constants */,
 				C4BDA5201D31372A000271EB /* Create */,
 				C4BDA51A1D312F1F000271EB /* Supporting Files */,
@@ -95,6 +106,31 @@
 				C4BDA5221D3139F2000271EB /* Constants.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		C4CF88D61D32EDE2009A9BAF /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF88D71D32EE00009A9BAF /* JoinView.swift */,
+				C4CF88DF1D32FCFF009A9BAF /* FoundQRView.swift */,
+			);
+			name = Join;
+			sourceTree = "<group>";
+		};
+		C4CF88D91D32F5DF009A9BAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF88DA1D32F5F4009A9BAF /* QRCodeService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		C4CF88DC1D32F6AB009A9BAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF88DD1D32F6B8009A9BAF /* QRCode.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4CF88DB1D32F5F4009A9BAF /* QRCodeService.swift in Sources */,
 				C4BDA5081D312E88000271EB /* CreateView.swift in Sources */,
 				C4BDA50E1D312E88000271EB /* What_s_Your_Wifi_.xcdatamodeld in Sources */,
+				C4CF88E01D32FD00009A9BAF /* FoundQRView.swift in Sources */,
 				C4BDA5251D3154D1000271EB /* CreatedQRImageView.swift in Sources */,
 				C4BDA5061D312E88000271EB /* AppDelegate.swift in Sources */,
+				C4CF88DE1D32F6B8009A9BAF /* QRCode.swift in Sources */,
+				C4CF88D81D32EE00009A9BAF /* JoinView.swift in Sources */,
 				C4BDA5231D3139F2000271EB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +364,7 @@
 				C4BDA5191D312E88000271EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

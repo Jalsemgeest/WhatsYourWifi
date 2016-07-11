@@ -13,5 +13,6 @@ struct Constants {
     
     struct Segues {
         static let SHOW_CREATED_WIFI_QR : String! = "ShowCreatedWifiQR"
+        static let FOUND_QR_CODE : String! = "FoundQRCode"
     }
 }
