@@ -9,13 +9,34 @@
 import UIKit
 import AVFoundation
 
-class JoinView: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class JoinView: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     var captureSession : AVCaptureSession?
     var videoPreviewLayer : AVCaptureVideoPreviewLayer?
     var qrCodeFrameView : UIView?
     var foundQRCode : QRCode?
     var found = false
+    var pickedImage : UIImage?
+    
+    @IBOutlet weak var previewView: UIView!
+    
+//    @IBAction func pickFromCameraRoll() {
+//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+//            let imagePicker = UIImagePickerController()
+//            imagePicker.delegate = self
+//            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+//            imagePicker.allowsEditing = true
+//            self.presentViewController(imagePicker, animated: true, completion: nil)
+//        }
+//    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        pickedImage = image
+        let imageData = image as? AVMetadataMachineReadableCodeObject {
+            
+        }
+        self.dismissViewControllerAnimated(true, completion: nil);
+    }
     
     func configureVideoCapture() {
         let objCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
@@ -45,8 +66,9 @@ class JoinView: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     {
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-        videoPreviewLayer?.frame = view.layer.bounds
-        self.view.layer.addSublayer(videoPreviewLayer!)
+        videoPreviewLayer?.frame = previewView.layer.bounds
+        previewView.layer.addSublayer(videoPreviewLayer!)
+        
         captureSession?.startRunning()
     }
     

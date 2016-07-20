@@ -194,11 +194,38 @@
                     <view key="view" contentMode="scaleToFill" id="YwP-7L-eGA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STG-Cq-QOD">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="558"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ER1-AZ-RoO">
+                                <rect key="frame" x="-4" y="558" width="383" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="zv4-hF-JAN"/>
+                                </constraints>
+                                <state key="normal" title="Camera Roll"/>
+                                <connections>
+                                    <action selector="pickFromCameraRoll" destination="nHo-L0-KYr" eventType="touchUpInside" id="Il6-ew-jUN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="STG-Cq-QOD" firstAttribute="top" secondItem="YwP-7L-eGA" secondAttribute="topMargin" id="I0c-yN-kAE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="STG-Cq-QOD" secondAttribute="trailing" constant="-20" id="Jhe-Pj-rk5"/>
+                            <constraint firstItem="STG-Cq-QOD" firstAttribute="leading" secondItem="YwP-7L-eGA" secondAttribute="leadingMargin" constant="-20" id="Ymh-04-F9s"/>
+                            <constraint firstItem="ER1-AZ-RoO" firstAttribute="leading" secondItem="YwP-7L-eGA" secondAttribute="leadingMargin" constant="-20" id="eEw-qi-ix0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ER1-AZ-RoO" secondAttribute="trailing" constant="-20" id="gl3-ch-hXu"/>
+                            <constraint firstItem="ER1-AZ-RoO" firstAttribute="top" secondItem="STG-Cq-QOD" secondAttribute="bottom" id="n34-rp-Um2"/>
+                            <constraint firstItem="3VF-Sc-hRs" firstAttribute="top" secondItem="ER1-AZ-RoO" secondAttribute="bottom" id="tjY-rK-cX0"/>
+                            <constraint firstItem="3VF-Sc-hRs" firstAttribute="top" secondItem="STG-Cq-QOD" secondAttribute="bottom" constant="60" id="wUl-Wc-t91"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lur-p8-bhi"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="previewView" destination="STG-Cq-QOD" id="v4F-TH-Ve7"/>
                         <segue destination="j6n-Bq-eNX" kind="presentation" identifier="FoundQRCode" id="Xbn-Il-bBq"/>
                     </connections>
                 </viewController>
