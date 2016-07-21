@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "What&apos;s Your Wifi?/JoinView.swift"
-            timestampString = "490751554.49339"
+            timestampString = "490751729.258367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "JoinView"
             landmarkType = "3">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "What&apos;s Your Wifi?/JoinView.swift"
-            timestampString = "490751554.49339"
+            timestampString = "490751729.258367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
             <Locations>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "What&apos;s Your Wifi?/JoinView.swift"
-            timestampString = "490751554.49339"
+            timestampString = "490751729.258367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "captureOutput(_:didOutputMetadataObjects:fromConnection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "What&apos;s Your Wifi?/JoinView.swift"
-            timestampString = "490751554.49339"
+            timestampString = "490751729.258367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "goBack(_:)"
             landmarkType = "5">
          </BreakpointContent>

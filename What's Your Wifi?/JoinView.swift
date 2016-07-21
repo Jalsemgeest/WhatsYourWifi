@@ -16,7 +16,7 @@ class JoinView: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UINavi
     var qrCodeFrameView : UIView?
     var foundQRCode : QRCode?
     var found = false
-    var pickedImage : UIImage?
+//    var pickedImage : UIImage?
     
     @IBOutlet weak var previewView: UIView!
     
@@ -30,13 +30,13 @@ class JoinView: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UINavi
 //        }
 //    }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        pickedImage = image
-        let imageData = image as? AVMetadataMachineReadableCodeObject {
-            
-        }
-        self.dismissViewControllerAnimated(true, completion: nil);
-    }
+//    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+//        pickedImage = image
+//        let imageData = image as? AVMetadataMachineReadableCodeObject {
+//            
+//        }
+//        self.dismissViewControllerAnimated(true, completion: nil);
+//    }
     
     func configureVideoCapture() {
         let objCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
